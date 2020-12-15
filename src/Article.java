@@ -32,9 +32,5 @@ public class Article {
 		this.solde = solde;
 	}
 	
-	public void affiche(){
-		System.out.println(nom+" "+ prix+" " +(this.solde ?"en solde": ""));
-	}
-	//calculer solde
 	
 }

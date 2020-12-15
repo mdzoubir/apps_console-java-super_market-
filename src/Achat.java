@@ -1,4 +1,3 @@
-
 public class Achat {
 	private Article article;
 	private int qt;
@@ -23,8 +22,6 @@ public class Achat {
 		this.qt = qt;
 	}
 	
-	public void calc(){
-		System.out.println(article.getPrix()*qt);
-	}
+	
 	
 }
