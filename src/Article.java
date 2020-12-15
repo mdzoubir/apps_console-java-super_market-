@@ -1,20 +1,18 @@
-
 public class Article {
 	private String nom;
 	private double prix;
-	private double solde;
-	public Article(String nom, double prix, double solde) {
+	private boolean solde;
+	public Article(String nom, double prix, boolean solde) {
 		super();
 		this.nom = nom;
 		this.prix = prix;
 		this.solde = solde;
 	}
-	public Article(String nom, double prix){
-		super();
-		this.nom = nom;
-		this.prix = prix;
-		this.solde = 0;
-	}
+//	public Article(String nom, double prix){
+//		super();
+//		this.nom = nom;
+//		this.prix = prix;
+//	}
 	public String getNom() {
 		return nom;
 	}
@@ -27,15 +25,15 @@ public class Article {
 	public void setPrix(double prix) {
 		this.prix = prix;
 	}
-	public double getSolde() {
+	public boolean getSolde() {
 		return solde;
 	}
-	public void setSolde(int solde) {
+	public void setSolde(Boolean solde) {
 		this.solde = solde;
 	}
 	
 	public void affiche(){
-		System.out.println(nom+" "+ prix+" " +(this.solde > 0?"en solde": ""));
+		System.out.println(nom+" "+ prix+" " +(this.solde ?"en solde": ""));
 	}
 	//calculer solde
 	

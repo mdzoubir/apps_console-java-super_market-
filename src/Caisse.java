@@ -1,4 +1,3 @@
-
 import java.util.*;
 public class Caisse {
 	private Chariot finalAchat;
@@ -19,22 +18,30 @@ public class Caisse {
 		for(Achat n : finalAchat.chario){
 			double prixTotalProduit;
 			
-			if(n.getArticle().getSolde()>0){
-				double solde = n.getArticle().getSolde()/100;
+			if(n.getArticle().getSolde()){
+				Scanner scanner = new Scanner(System.in);
+				System.out.println("le porsentage de solde : ");
+				double solde = scanner.nextDouble();
+				double soldeFinal = solde /	100;
+				//double solde = n.getArticle().getSolde()/100;
 				double prix = n.getArticle().getPrix() * n.getQt();
-				prixTotalProduit= prix - (prix*solde);
-			}else{
+				prixTotalProduit= prix - (prix*soldeFinal);
+				total += prixTotalProduit;
+			}
+			
+			else{
 				prixTotalProduit=n.getArticle().getPrix() * n.getQt();
+				total += n.getQt() * n.getArticle().getPrix();
 			}
 			
 			
 			System.out.println(n.getArticle().getNom()+ " : " + n.getQt()+ " x "  + n.getArticle().getPrix() 
-			+ " = "+ (prixTotalProduit)+ " dh " +(n.getArticle().getSolde() > 0?"(en solde)": ""));
-			total += n.getQt() * n.getArticle().getPrix();
+			+ " = "+ (prixTotalProduit)+ " dh " +(n.getArticle().getSolde() ?"(en solde)": ""));
+			
 			
 			
 		}
-		System.out.println("total = " + total + "dh");
+		System.out.println("le prix total = " + total + "dh");
 		return total;
 		
 	}
