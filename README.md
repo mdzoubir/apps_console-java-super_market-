@@ -1,6 +1,7 @@
 # super_market.java
 
 #Contexte du projet
+
 Basma-Supermarket est un nouvel supermarché dans votre quartier, le fondateur est encore perturbé, il ne sait pas comment gérer et organiser les articles et les achats.
 
 Basma-Supermarket souhaitera créer une application Console qui permet d’afficher le total des achats enregistrés par ses caissiers.
